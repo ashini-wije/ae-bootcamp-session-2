@@ -17,19 +17,19 @@ This document describes the core UI guidelines for the TODO app. All UI work mus
 
 Use this palette via the MUI theme. Hex values are the source of truth.
 
-| Role | Token | Light | Notes |
-| --- | --- | --- | --- |
-| Primary | `palette.primary.main` | `#FFB6C1` (cotton-candy pink) | Primary actions, FAB |
-| Primary contrast | `palette.primary.contrastText` | `#3A2A36` | Text on primary |
-| Secondary | `palette.secondary.main` | `#B5EAD7` (mint) | Secondary actions, tags |
-| Accent / tertiary | custom `palette.tertiary.main` | `#C7CEEA` (periwinkle) | Highlights, selected state |
-| Warning (due soon) | `palette.warning.main` | `#FFDAC1` (peach) | Tasks due today |
-| Error (overdue) | `palette.error.main` | `#FF8FA3` (rose) | Overdue tasks, destructive actions |
-| Success (completed) | `palette.success.main` | `#A8E6CF` (sage) | Completed indicator |
-| Background default | `palette.background.default` | `#FFF8F0` (cream) | App background |
-| Background paper | `palette.background.paper` | `#FFFFFF` | Cards, dialogs |
-| Text primary | `palette.text.primary` | `#3A2A36` (plum-charcoal) | Body text |
-| Text secondary | `palette.text.secondary` | `#7A6B75` | Helper text |
+| Role                | Token                          | Light                         | Notes                              |
+| ------------------- | ------------------------------ | ----------------------------- | ---------------------------------- |
+| Primary             | `palette.primary.main`         | `#FFB6C1` (cotton-candy pink) | Primary actions, FAB               |
+| Primary contrast    | `palette.primary.contrastText` | `#3A2A36`                     | Text on primary                    |
+| Secondary           | `palette.secondary.main`       | `#B5EAD7` (mint)              | Secondary actions, tags            |
+| Accent / tertiary   | custom `palette.tertiary.main` | `#C7CEEA` (periwinkle)        | Highlights, selected state         |
+| Warning (due soon)  | `palette.warning.main`         | `#FFDAC1` (peach)             | Tasks due today                    |
+| Error (overdue)     | `palette.error.main`           | `#FF8FA3` (rose)              | Overdue tasks, destructive actions |
+| Success (completed) | `palette.success.main`         | `#A8E6CF` (sage)              | Completed indicator                |
+| Background default  | `palette.background.default`   | `#FFF8F0` (cream)             | App background                     |
+| Background paper    | `palette.background.paper`     | `#FFFFFF`                     | Cards, dialogs                     |
+| Text primary        | `palette.text.primary`         | `#3A2A36` (plum-charcoal)     | Body text                          |
+| Text secondary      | `palette.text.secondary`       | `#7A6B75`                     | Helper text                        |
 
 - All foreground/background combinations above must be verified to meet **WCAG 2.1 AA contrast** (4.5:1 for body text, 3:1 for large text and UI components). If a pastel pairing fails, darken the foreground rather than abandoning the palette.
 - Provide a dark mode variant via `createTheme({ palette: { mode: 'dark' } })` using deeper, desaturated versions of the same hues.

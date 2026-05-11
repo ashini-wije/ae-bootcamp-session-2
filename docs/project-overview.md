@@ -14,15 +14,18 @@ The project follows a monorepo architecture with the following structure:
 ## Technology Stack
 
 ### Frontend
+
 - React
 - React DOM
 - CSS for styling
 
 ### Backend
+
 - Node.js
 - Express.js
 
 ### Testing
+
 - **Unit Tests**: Test individual functions and React components in isolation using Jest
   - **File Extensions**: `*.test.js` or `*.test.ts`
   - **Backend Location**: `packages/backend/__tests__/`
@@ -45,11 +48,13 @@ The project follows a monorepo architecture with the following structure:
 ## Getting Started
 
 ### Prerequisites
+
 - Node.js (v16 or higher)
 - npm (v7 or higher)
 - Playwright browsers (installed automatically with first E2E test run)
 
 ### Installation
+
 1. Clone the repository
 2. Run `npm install` at the root of the project to install all dependencies
 3. Start the development environment using `npm run start`

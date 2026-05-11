@@ -11,12 +11,11 @@ permissions:
   actions: write
   issues: write
 
-
 jobs:
   find_exercise:
     name: Find Exercise Issue
     uses: skills/exercise-toolkit/.github/workflows/find-exercise-issue.yml@v0.4.0
-  
+
   check_step_work:
     name: Check step work
     runs-on: ubuntu-latest
@@ -27,7 +26,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      
+
       - name: Get response templates
         uses: actions/checkout@v4
         with:
@@ -42,7 +41,7 @@ jobs:
             --edit-last
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        
+
         # START: Check practical exercise
 
       - name: Check for unit tests
@@ -91,9 +90,9 @@ jobs:
           BACKEND_PORT=$(grep -oE '\|\|[[:space:]]*[0-9]+' packages/backend/src/index.js | grep -oE '[0-9]+' || echo "3030")
           # Frontend uses React default or PORT env var
           FRONTEND_PORT="${PORT:-3000}"
-          
+
           echo "Starting servers - Frontend: $FRONTEND_PORT, Backend: $BACKEND_PORT"
-          
+
           npm run start &
           npx wait-on --timeout 120000 http://localhost:$FRONTEND_PORT http://localhost:$BACKEND_PORT
         timeout-minutes: 3
@@ -142,7 +141,7 @@ jobs:
 
       - name: Success
         run: echo "Build with context checks passed."
-      
+
   post_next_step_content:
     name: Post next step content
     needs: [find_exercise, check_step_work]

@@ -40,7 +40,7 @@ Do not disable rules globally to silence noise from a single file. If a rule is 
 
 **Favor small, single-purpose units.** Functions and components should do one thing and do it well. If a function needs a paragraph to explain, it probably needs to be split. React components should have a clear responsibility (presentation, state, data fetching) rather than mixing concerns; lift shared state into hooks or context only when it is genuinely shared.
 
-**Write code for the next reader.** Choose clarity over cleverness. Prefer explicit early returns over nested conditionals. Use guard clauses to handle edge cases up front so the happy path stays unindented. Comments should explain *why*, not *what* — if a comment is describing what the code does, the code itself should usually be rewritten to be self-explanatory.
+**Write code for the next reader.** Choose clarity over cleverness. Prefer explicit early returns over nested conditionals. Use guard clauses to handle edge cases up front so the happy path stays unindented. Comments should explain _why_, not _what_ — if a comment is describing what the code does, the code itself should usually be rewritten to be self-explanatory.
 
 **Handle errors at boundaries.** Validate input at the edges of the system (API handlers, form submissions, external service calls). Internal functions should be able to trust their inputs. Do not catch exceptions just to rethrow them or to log and swallow — let them propagate to a place that can do something meaningful.
 

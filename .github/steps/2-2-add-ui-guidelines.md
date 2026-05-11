@@ -1,6 +1,7 @@
 # Step 2-2: Add UI Guidelines
 
 ## Goal
+
 Create a clear set of UI guidelines to ensure the TODO app has a set of rules around what the user interface should look like.
 
 ## Instructions
@@ -13,13 +14,16 @@ Create a clear set of UI guidelines to ensure the TODO app has a set of rules ar
 4. Commit and push your changes.
 
 #### Success Criteria
+
 - `docs/ui-guidelines.md` exists and contains the specified guidelines.
 - `copilot-instructions.md` is updated to reference `ui-guidelines.md`.
 
 If you encounter any issues, you can:
+
 - Review that `docs/ui-guidelines.md` was created and `copilot-instructions.md` was updated
 - Double-check that your changes were pushed to the `feature/context` branch
 - Ask Copilot to fix specific problems
 
 ## Why?
+
 Documenting UI guidelines up front helps all contributors build a consistent and user-friendly interface, and provides a reference for future enhancements and reviews.

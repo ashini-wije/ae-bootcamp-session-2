@@ -1,6 +1,7 @@
 # Step 2-3: Add Testing Guidelines
 
 ## Goal
+
 Document clear testing guidelines for the TODO app to ensure code quality and reliability across the project.
 
 ## Instructions
@@ -37,13 +38,16 @@ Document clear testing guidelines for the TODO app to ensure code quality and re
 4. Commit and push your changes.
 
 #### Success Criteria
+
 - `docs/testing-guidelines.md` exists and contains a summary of `testing-practices.md` plus the requirements for unit, integration, and end-to-end testing.
 - `copilot-instructions.md` is updated to reference `testing-guidelines.md`.
 
 If you encounter any issues, you can:
+
 - Review that `docs/testing-guidelines.md` was created and `copilot-instructions.md` was updated
 - Double-check that your changes were pushed to the `feature/context` branch
 - Ask Copilot to fix specific problems
 
 ## Why?
+
 Clear testing guidelines help all contributors maintain high code quality, catch bugs early, and ensure the application works as intended.

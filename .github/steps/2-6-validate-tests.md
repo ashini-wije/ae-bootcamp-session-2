@@ -1,30 +1,35 @@
 # Step 2-6: Review and Validate the Test Suite
 
 ## Goal
+
 Review all unit, integration, and end-to-end (E2E) tests generated or modified by GitHub Copilot and ensure they are meaningful, maintainable, and passing.
 
 ## Instructions
 
 #### 1. Review the tests
+
 Review the new tests added by Copilot and the updates made to the existing ones. Verify that the generated tests cover the new app behaviors as well as error and edge cases and use mocks appropriately. Watch in particular for AI limitations like:
-  - False Positive Tests - Tests that always pass regardless of code correctness​
-  - Phantom Assertions - Assertions that check non-existent or wrong conditions​
-  - Mock Hallucinations - Mocks that behave unrealistically or that don’t match real behavior​
-  - Coverage Illusions - Tests that claim coverage but miss critical paths​
+
+- False Positive Tests - Tests that always pass regardless of code correctness​
+- Phantom Assertions - Assertions that check non-existent or wrong conditions​
+- Mock Hallucinations - Mocks that behave unrealistically or that don’t match real behavior​
+- Coverage Illusions - Tests that claim coverage but miss critical paths​
 
 Some helpful sanity checks:
+
 - Can I break the function and make the test fail?
 - Are the tests isolated or interdependent?
 - Is the data generated realistic for the scenario in which it is used?
 - Do integration tests use real wiring (no over-mocking)?
 - Do E2E tests validate the complete user journey (not just the happy path)?
-- Is the backend state verified (not just UI)? 
+- Is the backend state verified (not just UI)?
 
 #### 2. Run the tests
 
 **2a. Run Unit Tests**
 
 Unit tests run in isolation and don't require the app to be running:
+
 ```bash
 # Run frontend unit tests
 npm run test:frontend
@@ -41,6 +46,7 @@ Frontend unit tests cover React components and client-side functions in `package
 **2b. Run API Integration Tests**
 
 Integration tests require the backend server to be running:
+
 ```bash
 # In one terminal, start the backend
 npm run start:backend
@@ -56,36 +62,42 @@ These tests use Jest + Supertest to make real HTTP requests to the API. Tests ar
 E2E tests require both frontend and backend to be running:
 
 **Start the full application:**
+
 ```bash
 npm run start
 ```
 
 **In a new terminal, run Playwright tests:**
+
 ```bash
 npm run test:e2e
 ```
 
- **Important:** If you make code changes to fix test failures, you must restart the app for E2E tests to see the changes:
- ```bash
- # Stop the app (Ctrl+C in the terminal running npm start)
- # Then restart:
- npm run start
- # In a new terminal, run E2E tests again:
- npm run test:e2e
- ```
+**Important:** If you make code changes to fix test failures, you must restart the app for E2E tests to see the changes:
 
- **Tip:** For debugging test failures, you can run Playwright in UI mode (requires local execution):
- ```bash
- npx playwright test --ui
- ```
+```bash
+# Stop the app (Ctrl+C in the terminal running npm start)
+# Then restart:
+npm run start
+# In a new terminal, run E2E tests again:
+npm run test:e2e
+```
+
+**Tip:** For debugging test failures, you can run Playwright in UI mode (requires local execution):
+
+```bash
+npx playwright test --ui
+```
 
 **Run all tests together:**
 
 To run all test types (unit, integration, and E2E) in sequence:
+
 ```bash
 npm run test:all
 ```
- **Note:** This requires both frontend and backend to be running for integration and E2E tests.
+
+**Note:** This requires both frontend and backend to be running for integration and E2E tests.
 
 **2d. Common Issues and Troubleshooting**
 
@@ -130,6 +142,7 @@ Use a prompt like: "Test fails intermittently when checking for new task. The te
 **2e. Run with Coverage**
 
 When satisfied by the results, run the entire suite with coverage and verify that it is meeting the testing guidelines:
+
 ```bash
 npm test -- --coverage
 ```
@@ -137,10 +150,11 @@ npm test -- --coverage
 #### 3. Commit and push the changes
 
 ## Success Criteria
+
 - All tests pass successfully
 - Meaningful core coverage
 - No fragile/trivial tests
 
-
 ## Why?
+
 A passing test suite that actually asserts correct behavior is critical before expanding features. It is important to validate test quality and not just execution.

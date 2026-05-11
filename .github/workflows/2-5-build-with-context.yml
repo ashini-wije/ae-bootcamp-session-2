@@ -11,12 +11,11 @@ permissions:
   actions: write
   issues: write
 
-
 jobs:
   find_exercise:
     name: Find Exercise Issue
     uses: skills/exercise-toolkit/.github/workflows/find-exercise-issue.yml@v0.4.0
-  
+
   check_step_work:
     name: Check step work
     runs-on: ubuntu-latest
@@ -27,7 +26,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      
+
       - name: Get response templates
         uses: actions/checkout@v4
         with:
@@ -42,7 +41,7 @@ jobs:
             --edit-last
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        
+
         # START: Check practical exercise
 
       - name: Check for unit tests
@@ -122,7 +121,7 @@ jobs:
 
       - name: Success
         run: echo "Build with context checks passed."
-      
+
   post_next_step_content:
     name: Post next step content
     needs: [find_exercise, check_step_work]
@@ -147,7 +146,7 @@ jobs:
             --body-file ".github/steps/2-6-validate-tests.md"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
+
       - name: Create comment - watching for progress
         run: |
           gh issue comment "$ISSUE_URL" \

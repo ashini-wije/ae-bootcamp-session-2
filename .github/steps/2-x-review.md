@@ -4,7 +4,6 @@ _Congratulations, you've completed session 2 of the AI Coding Assistant Enableme
 
 <img src="https://octodex.github.com/images/jetpacktocat.png" alt=celebrate width=200 align=right>
 
-
 Here's a recap of your accomplishments:
 
 - Practiced instructing Copilot in your own words to document project standards
@@ -14,7 +13,6 @@ Here's a recap of your accomplishments:
 - Summarized coding style and code quality principles for maintainable code
 - Used Copilot Agent Mode to build the app using the project context files
 - Refined and validated the test suite with Copilot prompts
-
 
 ### What's next?
 

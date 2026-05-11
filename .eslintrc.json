@@ -1,0 +1,61 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2022": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "module",
+    "ecmaFeatures": { "jsx": true }
+  },
+  "plugins": ["import"],
+  "extends": ["eslint:recommended", "plugin:import/recommended", "prettier"],
+  "settings": {
+    "import/resolver": {
+      "node": { "extensions": [".js", ".jsx"] }
+    },
+    "react": { "version": "detect" }
+  },
+  "rules": {
+    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "no-console": "off",
+    "eqeqeq": ["error", "always", { "null": "ignore" }],
+    "prefer-const": "error",
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", ["parent", "sibling", "index"]],
+        "newlines-between": "always",
+        "alphabetize": { "order": "asc", "caseInsensitive": true }
+      }
+    ],
+    "import/no-unresolved": "off"
+  },
+  "overrides": [
+    {
+      "files": ["packages/frontend/**/*.{js,jsx}"],
+      "extends": ["plugin:react/recommended", "plugin:react-hooks/recommended"],
+      "rules": {
+        "react/react-in-jsx-scope": "off",
+        "react/prop-types": "off"
+      }
+    },
+    {
+      "files": ["**/__tests__/**", "**/*.test.js", "**/*.spec.js"],
+      "env": { "jest": true, "node": true }
+    }
+  ],
+  "ignorePatterns": [
+    "node_modules/",
+    "**/node_modules/**",
+    "build/",
+    "**/build/**",
+    "coverage/",
+    "**/coverage/**",
+    "playwright-report/",
+    "test-results/"
+  ]
+}

@@ -1,0 +1,12 @@
+node_modules
+**/node_modules
+coverage
+**/coverage
+build
+**/build
+dist
+.next
+.cache
+playwright-report
+test-results
+package-lock.json

@@ -1,6 +1,7 @@
 # Step 2-1: Add Functional Requirements Context
 
 ## Goal
+
 Create a clear set of functional requirements to expand the TODO app, so that all core features are documented for future development.
 
 ## Instructions
@@ -9,7 +10,7 @@ Create a clear set of functional requirements to expand the TODO app, so that al
 
 Click the below button to open the **Create Codespace** page in a new tab. Use the default configuration.
 
-   [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/{{full_repo_name}}?quickstart=1)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/{{full_repo_name}}?quickstart=1)
 
 :pencil2: Create a new branch called `feature/context`. :pencil2:
 
@@ -20,18 +21,20 @@ Click the below button to open the **Create Codespace** page in a new tab. Use t
 3. Ask Copilot to update `copilot-instructions.md` to reference the new `functional-requirements.md` file.
 4. Commit and push your changes.
 
-
 #### Success Criteria
+
 To complete this exercise successfully, ensure that:
+
 - A new `feature/context` branch is pushed
 - `docs/functional-requirements.md` exists and contains the specified requirements.
 - `copilot-instructions.md` is updated to reference `functional-requirements.md`.
 
 If you encounter any issues, you can:
+
 - Double check that the newly pushed branch is called `feature/context`
 - Review that `docs/functional-requirements.md` was created and `copilot-instructions.md` was updated
 - Ask Copilot to fix specific problems
 
-
 ## Why?
+
 Defining functional requirements up front helps all contributors understand the expected features and behaviors of the app, and provides a reference for future enhancements and testing.

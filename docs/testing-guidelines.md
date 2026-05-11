@@ -5,6 +5,7 @@ This document defines the testing principles for the TODO app. All new features 
 ## Test layers
 
 ### Unit tests
+
 - Use **Jest** to test individual functions and React components in isolation.
 - Naming convention: `*.test.js` or `*.test.ts`.
 - Location:
@@ -14,6 +15,7 @@ This document defines the testing principles for the TODO app. All new features 
 - Mock external dependencies (network, timers, modules) so each test exercises only the unit in question.
 
 ### Integration tests
+
 - Use **Jest + Supertest** to test backend API endpoints with real HTTP requests against the Express app.
 - Naming convention: `*.test.js` or `*.test.ts`.
 - Location: `packages/backend/__tests__/integration/`
@@ -21,6 +23,7 @@ This document defines the testing principles for the TODO app. All new features 
 - Use a real (in-memory or test-scoped) database/store and reset it between tests.
 
 ### End-to-end (E2E) tests
+
 - Use **Playwright** (required framework) to test complete UI workflows through browser automation.
 - Naming convention: `*.spec.js` or `*.spec.ts`.
 - Location: `tests/e2e/`

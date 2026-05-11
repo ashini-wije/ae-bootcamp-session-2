@@ -19,11 +19,21 @@
     "test:backend": "npm run test --workspace=backend",
     "install:all": "npm install && npm run install:frontend && npm run install:backend",
     "install:frontend": "cd packages/frontend && npm install",
-    "install:backend": "cd packages/backend && npm install"
+    "install:backend": "cd packages/backend && npm install",
+    "lint": "eslint --ext .js,.jsx packages tests",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
     "@playwright/test": "^1.40.0",
-    "wait-on": "^7.2.0"
+    "wait-on": "^7.2.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-react": "^7.34.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^3.2.5"
   }
 }
